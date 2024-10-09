@@ -1,4 +1,3 @@
-
 #include <ros/ros.h>
 #include <ros/console.h>
 #include <cmath>
@@ -368,10 +367,9 @@ const int arraySize = 7;
                     std::pow(box.position[0] - prev_box.position[0], 2) +
                     std::pow(box.position[1] - prev_box.position[1], 2) 
                 );
-                //add=add+0.000513;
-                //relative_velocity=0+add;
+                
                 actual_velocity=(3.6/time_diff_seconds)*std::sqrt(std::pow(gloabal_box_x - gloabal_box_x_t0, 2) + std::pow(gloabal_box_y - gloabal_box_y_t0, 2));
-                //actual_velocity=60+relative_velocity;
+                
 
                 //std::cout << "Relative Velocity of Box ID (m/s) " << box.id << " between frames: " << relative_velocity << std::endl;
                 std::cout << "Relative Velocity of Box ID  " << box.id << " between frames: in (km/hr)" << relative_velocity << std::endl;
